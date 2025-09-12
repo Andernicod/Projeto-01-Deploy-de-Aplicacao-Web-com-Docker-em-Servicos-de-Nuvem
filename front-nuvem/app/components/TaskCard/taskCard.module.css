@@ -1,0 +1,8 @@
+.sectionCard {
+    width: 600px;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
