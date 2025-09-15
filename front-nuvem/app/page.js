@@ -4,7 +4,9 @@ export default function Home() {
   return (
     <>
       <h1>Gerenciador de tarefas</h1>
-      <TaskCard/>
+      <container class="espacoCard">
+        <TaskCard/>
+      </container>
     </>
   );
 }

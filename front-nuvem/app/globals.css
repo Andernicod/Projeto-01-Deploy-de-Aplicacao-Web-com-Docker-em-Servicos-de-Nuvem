@@ -1,6 +1,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --border-color: #AAAAAA;
 }
 
 body {
@@ -9,4 +10,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.espacoCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
 }
