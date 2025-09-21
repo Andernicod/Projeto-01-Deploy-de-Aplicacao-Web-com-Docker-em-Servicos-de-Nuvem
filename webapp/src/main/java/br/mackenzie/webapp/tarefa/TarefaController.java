@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 @RestController
+@RequestMapping("/tarefas")
 class TarefaController {
 
     @Autowired
@@ -24,25 +26,24 @@ class TarefaController {
 
     }
 
-    @GetMapping("/api/tarefas")
+    @GetMapping()
     Iterable<Tarefa> getTarefas(@RequestParam Optional<Long> faculdadeId) {
-
         return tarefaRepo.findAll();
 
     }
 
-    @GetMapping("/api/tarefas/{id}")
+    @GetMapping("/{id}")
     Optional<Tarefa> getTarefa(@PathVariable long id) {
         return tarefaRepo.findById(id);
     }
 
-    @PostMapping("/api/tarefas")
+    @PostMapping()
     Tarefa createTarefa(@RequestBody Tarefa t) {
         Tarefa createdTarefa = tarefaRepo.save(t);
         return createdTarefa;
     }
 
-    @PutMapping("/api/tarefas/{tarefaId}")
+    @PutMapping("/{tarefaId}")
     Optional<Tarefa> updateTarefa(@RequestBody Tarefa tarefaRequest, @PathVariable long tarefaId) {
         Optional<Tarefa> opt = tarefaRepo.findById(tarefaId);
         if (opt.isPresent()) {
@@ -55,7 +56,7 @@ class TarefaController {
                 "Erro ao alterar dados da tarefa com id " + tarefaId);
     }
 
-    @DeleteMapping(value = "/api/tarefas/{id}")
+    @DeleteMapping(value = "/{id}")
     void deleteTarefa(@PathVariable long id) {
         tarefaRepo.deleteById(id);
     }
