@@ -2,9 +2,11 @@
   --background: #ffffff;
   --foreground: #171717;
   --border-color: #AAAAAA;
+  --button-color: rgb(12, 170, 12);
 }
 
 body {
+  font-family: var(--font-funnel-sans);
   margin: 0;
   padding: 0;
   display: flex;
@@ -19,4 +21,31 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: row;
+}
+
+.formulario {
+  border: 1px solid var(--border-color);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.formulario > input, select {
+  border: 0.8px solid var(--border-color);
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.create-button {
+  width: 64px;
+  height: 32px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: rgb(21, 21, 172);
+  align-self: center;
 }

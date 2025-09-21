@@ -26,21 +26,23 @@
     margin: -10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .text {
     display: flex;
     color: var(--border-color);
-    font-family: arial;
 }
 
-.statusCircle {
-    width: 8px;
-    height: 8px;
-    background-color: red;
-    align-self: center;
-    margin-left: 4px;
-    border-radius: 50%;
+.taskButton {
+    border: none;
+    width: 80px;
+    height: 32px;
+    margin-bottom: 12px;
+    color: white;
+    font-weight: 600;
+    background-color: var(--button-color);
+    border-radius: 8px;
 }
 
 .taskColor {
