@@ -31,6 +31,7 @@ export default function Home() {
       setInputTask("");
       setInputData("");
       setInputEmoji("");
+      fetchTasks()
     } else {
       setErrorMessage(response.message);
     }
@@ -62,12 +63,11 @@ export default function Home() {
           <option value="planta">Planta</option>
           <option value="estudos">Estudos</option>
           <option value="trabalho">Trabalho</option>
-          <option value="limpeza">Limpeza</option>
         </select>
         <button type="submit" className="create-button">Criar</button>
       </form>
-      <div class="espacoCard">
-        {dados.map((tasks, index) => { <TaskCard {...tasks} key={index} /> })}
+      <div className="espacoCard">
+        {dados.map((tasks, index) => ( <TaskCard tasks={tasks} key={index} /> ))}
       </div>
     </>
   );
