@@ -2,7 +2,6 @@
 
 import { use, useState } from "react";
 import TaskCard from "./components/TaskCard"
-import 'emoji-picker-element';
 
 export default function Home() {
 
