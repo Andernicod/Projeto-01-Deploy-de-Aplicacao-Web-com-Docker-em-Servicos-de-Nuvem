@@ -2,16 +2,16 @@
 
 import styles from "./taskCard.module.css"
 
-const TaskCard = () => {
+const TaskCard = ({tasks}) => {
     return (
         <section className={styles.containerCard}>
-            <img src="https://symbl-cdn.com/i/webp/d9/473ff79758f677cb8879408da5fc79.webp" className={styles.emoji}></img>
-            <h3 className={styles.taskTitle}>Regar as suculentas da varanda do quarto de hóspedes</h3>
+            <img src={tasks.emoji + ".png"} className={styles.emoji}></img>
+            <h3 className={styles.taskTitle}>{tasks.descricao}</h3>
             <section className={styles.infoPlace}>
-                <p className={styles.text}>Hoje 15h</p>
+                <p className={styles.text}>{tasks.data}</p>
                 <button className={styles.taskButton}>Feito</button>
             </section>
-            <bottom className={styles.taskColor}></bottom>
+            <div className={styles.taskColor}></div>
         </section>
     );
 }
