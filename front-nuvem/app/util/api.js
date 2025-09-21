@@ -1,6 +1,6 @@
 export async function getTasks() {
     try {
-        let data = await fetch("http://54.162.87.33:25000/tarefas");
+        let data = await fetch("http://18.207.177.86:25000/tarefas");
         let tasks = await data.json();
         return tasks;
     } catch (error) {
@@ -10,7 +10,7 @@ export async function getTasks() {
 
 export async function createTask(task) {
     try {
-        const response = await fetch("http://54.162.87.33:25000/tarefas", {
+        const response = await fetch("http://18.207.177.86:25000/tarefas", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
