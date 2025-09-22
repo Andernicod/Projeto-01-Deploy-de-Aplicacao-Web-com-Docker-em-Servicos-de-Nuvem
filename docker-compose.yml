@@ -6,9 +6,9 @@ services:
     container_name: webapp
     ports:
       - "25000:25000"
-    enviroment:
+    environment:
       - SPRING_DATASOURCE_URL=${DB_URL}
-      - sPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
       - SPRING_DATASOURCE_PASSWORD=${DB_PASS}
     restart: always
 
