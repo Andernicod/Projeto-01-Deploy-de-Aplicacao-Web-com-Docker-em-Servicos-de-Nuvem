@@ -7,7 +7,7 @@ const funnelSans = Funnel_Sans({
 });
 
 export const metadata = {
-  title: "Taks Manager",
+  title: "Tasks Manager",
   description: "Gerenciador de tarefas",
 };
 

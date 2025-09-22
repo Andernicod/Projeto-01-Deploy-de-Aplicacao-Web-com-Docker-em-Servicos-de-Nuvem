@@ -1,12 +1,13 @@
 .containerCard {
     min-width: 380px;
-    min-height: 216px;
+    max-height: 216px;
     border: 1px solid var(--border-color);
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 12px;
+    background-color: white;
 }
 
 .emoji {
@@ -43,11 +44,12 @@
     font-weight: 600;
     background-color: var(--button-color);
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .taskColor {
     min-width: 100%;
     height: 14px;
     border-radius: 0 0 16px 16px;
-    background-color: green;
+    background-color: blueviolet;
 }

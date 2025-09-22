@@ -1,4 +1,6 @@
+br\mackenzie\webapp\CorsConfig$1.class
+br\mackenzie\webapp\tarefa\TarefaController.class
+br\mackenzie\webapp\CorsConfig.class
 br\mackenzie\webapp\tarefa\TarefaRepo.class
 br\mackenzie\webapp\tarefa\Tarefa.class
-br\mackenzie\webapp\tarefa\TarefaController.class
 br\mackenzie\webapp\WebApp.class
