@@ -6,6 +6,9 @@ WORKDIR /app
 
 # Copiando as dependências do pom.xml
 COPY pom.xml .
+
+RUN mvn dependency:go-offline
+
 # Copiando os arquivos da aplicação
 COPY src ./src
 
