@@ -15,8 +15,14 @@ COPY src ./src
 # Executando o build da aplicação
 RUN mvn clean package -DskipTests
 
-# Expondo a porta 25000 ao docker
+FROM openjdk:17-jre-slim
+
+WORKDIR /app
+
+# Copia APENAS o arquivo .jar gerado no estágio anterior
+COPY --from=builder /app/target/webapp-springboot3-1.0.0.jar app.jar
+
 EXPOSE 25000
 
-# Executando os comandos para iniar a aplicação
-CMD [ "java", "-jar", "target/webapp-springboot3-1.0.0.jar" ]
+# Comando para iniciar a aplicação
+ENTRYPOINT [ "java", "-jar", "app.jar" ]
