@@ -1,5 +1,5 @@
 # Instalando a imagem docker com o java 17 e maven
-FROM maven:3.8.5-openjdk-17
+FROM maven:3.8.5-openjdk-17 AS builder
 
 # Definindo o app como diretório de trabalho
 WORKDIR /app
@@ -15,7 +15,7 @@ COPY src ./src
 # Executando o build da aplicação
 RUN mvn clean package -DskipTests
 
-FROM openjdk:17-jre-slim
+FROM amazoncorretto:17-alpine-jre
 
 WORKDIR /app
 
