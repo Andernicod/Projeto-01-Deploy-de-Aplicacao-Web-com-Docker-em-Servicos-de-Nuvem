@@ -15,7 +15,7 @@ COPY src ./src
 # Executando o build da aplicação
 RUN mvn clean package -DskipTests
 
-FROM amazoncorretto:17-alpine-jre
+FROM amazoncorretto:25.0.0-alpine3.22
 
 WORKDIR /app
 
