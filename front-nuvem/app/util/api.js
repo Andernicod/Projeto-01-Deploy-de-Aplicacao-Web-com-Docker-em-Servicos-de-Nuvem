@@ -1,6 +1,6 @@
 export async function getTasks() {
     try {
-        let data = await fetch("http://10.0.1.136:25000/tarefas");
+        let data = await fetch("http://alb-nuvem-381228992.us-east-1.elb.amazonaws.com/tarefas");
         let tasks = await data.json();
         return tasks;
     } catch (error) {
@@ -10,7 +10,7 @@ export async function getTasks() {
 
 export async function createTask(task) {
     try {
-        const response = await fetch("http://10.0.1.136:25000/tarefas", {
+        const response = await fetch("http://alb-nuvem-381228992.us-east-1.elb.amazonaws.com/tarefas", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -29,7 +29,7 @@ export async function createTask(task) {
 
 export async function deleteTask(id_task) {
     try {
-        fetch(`http://10.0.1.136:25000/tarefas/${id_task}`, {
+        fetch(`http://alb-nuvem-381228992.us-east-1.elb.amazonaws.com/tarefas/${id_task}`, {
             method : "DELETE"
         })
     } catch (error) {
