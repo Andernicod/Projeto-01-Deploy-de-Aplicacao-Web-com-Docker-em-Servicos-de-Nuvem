@@ -1,0 +1,10 @@
+services:
+  backend:
+    build: ./webapp
+    container_name: webapp
+    ports:
+      - "25000:25000"
+    environment:
+      - SPRING_DATASOURCE_URL=${DB_URL}
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASS}
