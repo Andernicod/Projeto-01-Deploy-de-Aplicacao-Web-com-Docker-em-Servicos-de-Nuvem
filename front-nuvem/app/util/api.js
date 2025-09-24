@@ -1,6 +1,6 @@
 export async function getTasks() {
     try {
-        let data = await fetch(`${API_URL}/tarefas`);
+        let data = await fetch(`${NEXT_PUBLIC_API_URL}/tarefas`);
         let tasks = await data.json();
         return tasks;
     } catch (error) {
@@ -10,7 +10,7 @@ export async function getTasks() {
 
 export async function createTask(task) {
     try {
-        const response = await fetch(`${API_URL}/tarefas`, {
+        const response = await fetch(`${NEXT_PUBLIC_API_URL}/tarefas`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -29,7 +29,7 @@ export async function createTask(task) {
 
 export async function deleteTask(id_task) {
     try {
-        fetch(`${API_URL}/tarefas/${id_task}`, {
+        fetch(`${NEXT_PUBLIC_API_URL}/tarefas/${id_task}`, {
             method : "DELETE"
         })
     } catch (error) {
