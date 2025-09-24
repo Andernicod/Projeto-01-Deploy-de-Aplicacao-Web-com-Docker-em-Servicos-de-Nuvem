@@ -1,6 +1,6 @@
 services:
   backend:
-    build: ./webapp
+    build: .
     container_name: webapp
     ports:
       - "25000:25000"
