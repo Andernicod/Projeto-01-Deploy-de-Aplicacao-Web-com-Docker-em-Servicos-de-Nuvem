@@ -3,6 +3,6 @@ O objetivo deste projeto é te familiarizar com o processo de implantação (dep
 
 # Integrantes
 
-Anderson Correa Nicodemo - 10403760
-Guilherme Silva Dias - 10427415
+Anderson Correa Nicodemo - 10403760  
+Guilherme Silva Dias - 10427415  
 Raffael Rodrigues Esteves - 10420414
