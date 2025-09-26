@@ -1,8 +1,8 @@
 services:
   frontend:
-    build: .
-    container_name: frontnuvem
+    build: . # Construindo a imagem a partir do Dockerfile na raiz do diretório
+    container_name: frontnuvem # Nome do container
     ports:
-     - "8080:8080"
+     - "8080:8080" # Mapeando a porta 8080 do container para a porta 8080 da máquina host
     environment:
-      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL} # Variável de ambiente para a URL da API

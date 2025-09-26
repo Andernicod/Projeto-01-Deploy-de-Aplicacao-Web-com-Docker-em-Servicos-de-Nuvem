@@ -1,10 +1,10 @@
-# Instalando o nodeJS na máquina virtual
+# Definindo a imagem base com o nodeJS
 FROM node:18-alpine
 
 # Definindo o app como diretório de trabalho
 WORKDIR /app
 
-# Copiando os arquivos essenciais para o app
+# Copiando o package json para o /app do container
 COPY package.json ./
 
 # Instalando as dependências
